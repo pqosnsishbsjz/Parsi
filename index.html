@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="description" content="پارسی مارکت - بزرگترین فروشگاه خدمات تلگرام، VPN، شبکه‌های اجتماعی و گیمینگ">
+    <title>پارسی مارکت | اولین فروشگاه تخصصی</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Telegram Web App -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <!-- هدر -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>پارسی مارکت</span>
+            </div>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+    <!-- نوار کناری (سایدبار) -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <i class="fas fa-store"></i>
+            <span>پارسی مارکت</span>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-link active" data-page="home">
+                <i class="fas fa-home"></i>
+                <span>خانه</span>
+            </a>
+            <a href="#" class="nav-link" data-page="shop">
+                <i class="fas fa-shopping-bag"></i>
+                <span>فروشگاه</span>
+            </a>
+            <a href="#" class="nav-link" data-page="orders">
+                <i class="fas fa-truck"></i>
+                <span>پیگیری سفارش</span>
+            </a>
+            <a href="#" class="nav-link" data-page="support">
+                <i class="fas fa-headset"></i>
+                <span>پشتیبانی</span>
+            </a>
+            <a href="#" class="nav-link" data-page="profile">
+                <i class="fas fa-user"></i>
+                <span>پروفایل</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <div class="user-info">
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="user-details">
+                    <span class="user-name" id="userName">کاربر</span>
+                    <span class="user-id" id="userId"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- محتوای اصلی -->
+    <main class="main-content">
+        <div class="overlay"></div>
+        
+        <!-- صفحه خانه -->
+        <div id="home-page" class="page active">
+            <div class="hero">
+                <div class="hero-badge">
+                    <i class="fas fa-certificate"></i>
+                    معتبرترین فروشگاه
+                </div>
+                <h1 class="hero-title">
+                    به <span class="highlight">پارسی مارکت</span>
+                    <br>خوش آمدید
+                </h1>
+                <p class="hero-desc">
+                    بزرگترین و معتبرترین فروشگاه خدمات تلگرام، VPN، شبکه‌های اجتماعی و گیمینگ
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="navigateTo('shop')">
+                        <i class="fas fa-store"></i>
+                        شروع خرید
+                    </button>
+                    <button class="btn btn-outline" onclick="navigateTo('support')">
+                        <i class="fas fa-headset"></i>
+                        پشتیبانی
+                    </button>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <span class="stat-number" id="userCount">0</span>
+                    <span class="stat-label">کاربر فعال</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="stat-number" id="orderCount">0</span>
+                    <span class="stat-label">سفارش موفق</span>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-clock"></i>
+                    <span class="stat-number">۱۲-۱۲</span>
+                    <span class="stat-label">ساعت کاری</span>
+                </div>
+            </div>
+            
+            <div class="features">
+                <h2 class="section-title">چرا پارسی مارکت؟</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>ضمانت اصالت</h3>
+                        <p>کلیه خدمات با ضمانت اصالت و کیفیت</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>تحویل فوری</h3>
+                        <p>سریع‌ترین زمان تحویل سفارشات</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>پشتیبانی ۲۴/۷</h3>
+                        <p>پشتیبانی آنلاین در تمام ساعات</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-wallet"></i>
+                        <h3>قیمت مناسب</h3>
+                        <p>بهترین قیمت‌ها در بازار</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- صفحه فروشگاه -->
+        <div id="shop-page" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-store"></i> فروشگاه پارسی مارکت</h2>
+                <p>محصول مورد نظر خود را انتخاب کنید</p>
+            </div>
+            
+            <div class="categories">
+                <div class="category-item" data-cat="1">
+                    <i class="fas fa-star"></i>
+                    <span>پریمیوم تلگرام</span>
+                </div>
+                <div class="category-item" data-cat="2">
+                    <i class="fas fa-gem"></i>
+                    <span>استارز تلگرام</span>
+                </div>
+                <div class="category-item" data-cat="3">
+                    <i class="fas fa-gift"></i>
+                    <span>گیفت تلگرام</span>
+                </div>
+                <div class="category-item" data-cat="4">
+                    <i class="fas fa-chart-line"></i>
+                    <span>NFT آپگرید</span>
+                </div>
+                <div class="category-item" data-cat="5">
+                    <i class="fas fa-coins"></i>
+                    <span>واریز تون</span>
+                </div>
+                <div class="category-item" data-cat="6">
+                    <i class="fas fa-lock"></i>
+                    <span>VPN ویتوری</span>
+                </div>
+                <div class="category-item" data-cat="7">
+                    <i class="fas fa-user-plus"></i>
+                    <span>ممبر با کیفیت</span>
+                </div>
+                <div class="category-item" data-cat="8">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>شماره مجازی</span>
+                </div>
+                <div class="category-item" data-cat="9">
+                    <i class="fab fa-instagram"></i>
+                    <span>اینستاگرام</span>
+                </div>
+                <div class="category-item" data-cat="10">
+                    <i class="fab fa-youtube"></i>
+                    <span>یوتیوب</span>
+                </div>
+                <div class="category-item" data-cat="11">
+                    <i class="fab fa-tiktok"></i>
+                    <span>تیک تاک</span>
+                </div>
+                <div class="category-item" data-cat="12">
+                    <i class="fab fa-twitter"></i>
+                    <span>توییتر</span>
+                </div>
+                <div class="category-item" data-cat="13">
+                    <i class="fas fa-gamepad"></i>
+                    <span>کالاف دیوتی</span>
+                </div>
+                <div class="category-item" data-cat="14">
+                    <i class="fas fa-robot"></i>
+                    <span>سلف تلگرام</span>
+                </div>
+            </div>
+            
+            <div id="products-container">
+                <!-- محصولات اینجا لود میشن -->
+            </div>
+        </div>
+        
+        <!-- صفحه پیگیری سفارش -->
+        <div id="orders-page" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-truck"></i> پیگیری سفارش</h2>
+                <p>وضعیت سفارش خود را مشاهده کنید</p>
+            </div>
+            
+            <div class="track-card">
+                <div class="track-input-group">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="trackingCode" placeholder="کد پیگیری خود را وارد کنید...">
+                    <button class="btn-track" onclick="trackOrder()">
+                        <i class="fas fa-arrow-left"></i>
+                        پیگیری
+                    </button>
+                </div>
+                <div id="trackResult" class="track-result"></div>
+            </div>
+            
+            <div class="recent-orders">
+                <h3>سفارشات اخیر شما</h3>
+                <div id="recentOrdersList"></div>
+            </div>
+        </div>
+        
+        <!-- صفحه پشتیبانی -->
+        <div id="support-page" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-headset"></i> پشتیبانی</h2>
+                <p>۲۴ ساعته پاسخگوی شما هستیم</p>
+            </div>
+            
+            <div class="support-card">
+                <div class="support-item">
+                    <i class="fab fa-telegram"></i>
+                    <div class="support-info">
+                        <h3>تلگرام</h3>
+                        <p>@YeParse</p>
+                        <button class="btn-contact" onclick="openTelegram('YeParse')">
+                            ارتباط با پشتیبانی
+                        </button>
+                    </div>
+                </div>
+                <div class="support-item">
+                    <i class="fab fa-instagram"></i>
+                    <div class="support-info">
+                        <h3>اینستاگرام</h3>
+                        <p>@ParsiMarkt</p>
+                        <button class="btn-contact" onclick="openInstagram('ParsiMarkt')">
+                            پیج اینستاگرام
+                        </button>
+                    </div>
+                </div>
+                <div class="support-item">
+                    <i class="fas fa-envelope"></i>
+                    <div class="support-info">
+                        <h3>ایمیل</h3>
+                        <p>support@parsimarket.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-section">
+                <h3>سوالات متداول</h3>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <span>چگونه سفارش بدم؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            به فروشگاه بروید، محصول مورد نظر را انتخاب کنید و روی دکمه ثبت سفارش کلیک کنید.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-clock"></i>
+                            <span>چقدر طول میکشه؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            بعد از تایید پرداخت، حداکثر 24 ساعت طول میکشد.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-undo-alt"></i>
+                            <span>بازگشت وجه دارید؟</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            در صورت بروز مشکل، تا 72 ساعت بازگشت وجه داریم.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- صفحه پروفایل -->
+        <div id="profile-page" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-user-circle"></i> پروفایل من</h2>
+                <p>اطلاعات حساب کاربری شما</p>
+            </div>
+            
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="profile-info">
+                    <div class="info-row">
+                        <span class="label">نام:</span>
+                        <span class="value" id="profileName">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">یوزرنیم:</span>
+                        <span class="value" id="profileUsername">-</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">تعداد سفارشات:</span>
+                        <span class="value" id="profileOrders">0</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">کل خرید:</span>
+                        <span class="value" id="profileTotal">0 تومان</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">سطح:</span>
+                        <span class="value" id="profileLevel">برنزی</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 پارسی مارکت - تمامی حقوق محفوظ است</p>
+            <div class="social-links">
+                <a href="#" onclick="openTelegram('ParsiMarkt')"><i class="fab fa-telegram"></i></a>
+                <a href="#" onclick="openInstagram('ParsiMarkt')"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
